@@ -13,6 +13,7 @@
 		0AAB74E626FD464E007C44E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB74E426FD464E007C44E7 /* Main.storyboard */; };
 		0AAB74E826FD464F007C44E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB74E726FD464F007C44E7 /* Assets.xcassets */; };
 		0AAB74EB26FD464F007C44E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB74E926FD464F007C44E7 /* LaunchScreen.storyboard */; };
+		520A4B0963BEDA9BF149ED52 /* Pods_AlkemyMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ADEFE317B009754FC14E169 /* Pods_AlkemyMovies.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		0AAB74E726FD464F007C44E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AAB74EA26FD464F007C44E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AAB74EC26FD464F007C44E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ADEFE317B009754FC14E169 /* Pods_AlkemyMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlkemyMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFFF48BF8E8CC65FF00BE17A /* Pods-AlkemyMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlkemyMovies.release.xcconfig"; path = "Target Support Files/Pods-AlkemyMovies/Pods-AlkemyMovies.release.xcconfig"; sourceTree = "<group>"; };
+		EA99C63BB82EEFFFBDD31F25 /* Pods-AlkemyMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlkemyMovies.debug.xcconfig"; path = "Target Support Files/Pods-AlkemyMovies/Pods-AlkemyMovies.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520A4B0963BEDA9BF149ED52 /* Pods_AlkemyMovies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				0AAB74DD26FD464E007C44E7 /* AlkemyMovies */,
 				0AAB74DC26FD464E007C44E7 /* Products */,
+				BE8A49555444B8C2BE646016 /* Pods */,
+				A0F156825237CED8711E016E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = AlkemyMovies;
 			sourceTree = "<group>";
 		};
+		A0F156825237CED8711E016E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8ADEFE317B009754FC14E169 /* Pods_AlkemyMovies.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE8A49555444B8C2BE646016 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA99C63BB82EEFFFBDD31F25 /* Pods-AlkemyMovies.debug.xcconfig */,
+				AFFF48BF8E8CC65FF00BE17A /* Pods-AlkemyMovies.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AAB74EF26FD464F007C44E7 /* Build configuration list for PBXNativeTarget "AlkemyMovies" */;
 			buildPhases = (
+				96CE5176CB67B02D96D117EE /* [CP] Check Pods Manifest.lock */,
 				0AAB74D726FD464E007C44E7 /* Sources */,
 				0AAB74D826FD464E007C44E7 /* Frameworks */,
 				0AAB74D926FD464E007C44E7 /* Resources */,
+				27B6B09F5C96E11F01C4C3F5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27B6B09F5C96E11F01C4C3F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlkemyMovies/Pods-AlkemyMovies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlkemyMovies/Pods-AlkemyMovies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlkemyMovies/Pods-AlkemyMovies-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96CE5176CB67B02D96D117EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlkemyMovies-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0AAB74D726FD464E007C44E7 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		0AAB74F026FD464F007C44E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA99C63BB82EEFFFBDD31F25 /* Pods-AlkemyMovies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +369,7 @@
 		};
 		0AAB74F126FD464F007C44E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFFF48BF8E8CC65FF00BE17A /* Pods-AlkemyMovies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
