@@ -19,6 +19,7 @@
 		0AAB74FB26FD52BB007C44E7 /* MoviesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB74F926FD52BB007C44E7 /* MoviesTableViewController.xib */; };
 		0AAB74FE26FD5460007C44E7 /* RandomMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB74FC26FD5460007C44E7 /* RandomMovieViewController.swift */; };
 		0AAB74FF26FD5460007C44E7 /* RandomMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB74FD26FD5460007C44E7 /* RandomMovieViewController.xib */; };
+		0AAB750126FD772E007C44E7 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB750026FD772E007C44E7 /* APIService.swift */; };
 		520A4B0963BEDA9BF149ED52 /* Pods_AlkemyMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ADEFE317B009754FC14E169 /* Pods_AlkemyMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		0AAB74F926FD52BB007C44E7 /* MoviesTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesTableViewController.xib; sourceTree = "<group>"; };
 		0AAB74FC26FD5460007C44E7 /* RandomMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMovieViewController.swift; sourceTree = "<group>"; };
 		0AAB74FD26FD5460007C44E7 /* RandomMovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RandomMovieViewController.xib; sourceTree = "<group>"; };
+		0AAB750026FD772E007C44E7 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		8ADEFE317B009754FC14E169 /* Pods_AlkemyMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlkemyMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFFF48BF8E8CC65FF00BE17A /* Pods-AlkemyMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlkemyMovies.release.xcconfig"; path = "Target Support Files/Pods-AlkemyMovies/Pods-AlkemyMovies.release.xcconfig"; sourceTree = "<group>"; };
 		EA99C63BB82EEFFFBDD31F25 /* Pods-AlkemyMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlkemyMovies.debug.xcconfig"; path = "Target Support Files/Pods-AlkemyMovies/Pods-AlkemyMovies.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				0AAB74F926FD52BB007C44E7 /* MoviesTableViewController.xib */,
 				0AAB74FC26FD5460007C44E7 /* RandomMovieViewController.swift */,
 				0AAB74FD26FD5460007C44E7 /* RandomMovieViewController.xib */,
+				0AAB750026FD772E007C44E7 /* APIService.swift */,
 			);
 			path = AlkemyMovies;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AAB74FE26FD5460007C44E7 /* RandomMovieViewController.swift in Sources */,
+				0AAB750126FD772E007C44E7 /* APIService.swift in Sources */,
 				0AAB74F726FD51BB007C44E7 /* TabBarViewController.swift in Sources */,
 				0AAB74F426FD47D0007C44E7 /* LogInViewController.swift in Sources */,
 				0AAB74DF26FD464E007C44E7 /* AppDelegate.swift in Sources */,
