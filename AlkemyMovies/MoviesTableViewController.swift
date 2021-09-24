@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MoviesTableViewController.swift
 //  AlkemyMovies
 //
 //  Created by kevin on 23/09/2021.
@@ -8,13 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MoviesTableViewController: UIViewController {
 
+    @IBOutlet weak var moviesTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
 
-}
 
+}
