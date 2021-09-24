@@ -22,6 +22,9 @@
 		0AAB750126FD772E007C44E7 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB750026FD772E007C44E7 /* APIService.swift */; };
 		0AAB750426FD7FB5007C44E7 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB750226FD7FB5007C44E7 /* MovieTableViewCell.swift */; };
 		0AAB750526FD7FB5007C44E7 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB750326FD7FB5007C44E7 /* MovieTableViewCell.xib */; };
+		0AF90D2C26FDEB29008649EF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF90D2B26FDEB29008649EF /* Model.swift */; };
+		0AF90D2F26FDEDBE008649EF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF90D2D26FDEDBE008649EF /* DetailViewController.swift */; };
+		0AF90D3026FDEDBE008649EF /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF90D2E26FDEDBE008649EF /* DetailViewController.xib */; };
 		520A4B0963BEDA9BF149ED52 /* Pods_AlkemyMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ADEFE317B009754FC14E169 /* Pods_AlkemyMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,9 @@
 		0AAB750026FD772E007C44E7 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		0AAB750226FD7FB5007C44E7 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		0AAB750326FD7FB5007C44E7 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		0AF90D2B26FDEB29008649EF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		0AF90D2D26FDEDBE008649EF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0AF90D2E26FDEDBE008649EF /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		8ADEFE317B009754FC14E169 /* Pods_AlkemyMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlkemyMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFFF48BF8E8CC65FF00BE17A /* Pods-AlkemyMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlkemyMovies.release.xcconfig"; path = "Target Support Files/Pods-AlkemyMovies/Pods-AlkemyMovies.release.xcconfig"; sourceTree = "<group>"; };
 		EA99C63BB82EEFFFBDD31F25 /* Pods-AlkemyMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlkemyMovies.debug.xcconfig"; path = "Target Support Files/Pods-AlkemyMovies/Pods-AlkemyMovies.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,24 +87,51 @@
 		0AAB74DD26FD464E007C44E7 /* AlkemyMovies */ = {
 			isa = PBXGroup;
 			children = (
+				0AF90D3126FDF8D3008649EF /* Model */,
+				0AF90D3326FDF9A8008649EF /* Cells */,
+				0AF90D3226FDF8F7008649EF /* View */,
 				0AAB74DE26FD464E007C44E7 /* AppDelegate.swift */,
 				0AAB74E026FD464E007C44E7 /* SceneDelegate.swift */,
 				0AAB74E426FD464E007C44E7 /* Main.storyboard */,
 				0AAB74E726FD464F007C44E7 /* Assets.xcassets */,
 				0AAB74E926FD464F007C44E7 /* LaunchScreen.storyboard */,
 				0AAB74EC26FD464F007C44E7 /* Info.plist */,
+			);
+			path = AlkemyMovies;
+			sourceTree = "<group>";
+		};
+		0AF90D3126FDF8D3008649EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0AF90D2B26FDEB29008649EF /* Model.swift */,
+				0AAB750026FD772E007C44E7 /* APIService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0AF90D3226FDF8F7008649EF /* View */ = {
+			isa = PBXGroup;
+			children = (
 				0AAB74F226FD47D0007C44E7 /* LogInViewController.swift */,
 				0AAB74F326FD47D0007C44E7 /* LogInViewController.xib */,
 				0AAB74F626FD51BB007C44E7 /* TabBarViewController.swift */,
 				0AAB74F826FD52BB007C44E7 /* MoviesTableViewController.swift */,
 				0AAB74F926FD52BB007C44E7 /* MoviesTableViewController.xib */,
+				0AF90D2D26FDEDBE008649EF /* DetailViewController.swift */,
+				0AF90D2E26FDEDBE008649EF /* DetailViewController.xib */,
 				0AAB74FC26FD5460007C44E7 /* RandomMovieViewController.swift */,
 				0AAB74FD26FD5460007C44E7 /* RandomMovieViewController.xib */,
-				0AAB750026FD772E007C44E7 /* APIService.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0AF90D3326FDF9A8008649EF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
 				0AAB750226FD7FB5007C44E7 /* MovieTableViewCell.swift */,
 				0AAB750326FD7FB5007C44E7 /* MovieTableViewCell.xib */,
 			);
-			path = AlkemyMovies;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		A0F156825237CED8711E016E /* Frameworks */ = {
@@ -181,6 +214,7 @@
 				0AAB74F526FD47D0007C44E7 /* LogInViewController.xib in Resources */,
 				0AAB750526FD7FB5007C44E7 /* MovieTableViewCell.xib in Resources */,
 				0AAB74EB26FD464F007C44E7 /* LaunchScreen.storyboard in Resources */,
+				0AF90D3026FDEDBE008649EF /* DetailViewController.xib in Resources */,
 				0AAB74FF26FD5460007C44E7 /* RandomMovieViewController.xib in Resources */,
 				0AAB74E826FD464F007C44E7 /* Assets.xcassets in Resources */,
 				0AAB74E626FD464E007C44E7 /* Main.storyboard in Resources */,
@@ -237,12 +271,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF90D2C26FDEB29008649EF /* Model.swift in Sources */,
 				0AAB74FE26FD5460007C44E7 /* RandomMovieViewController.swift in Sources */,
 				0AAB750126FD772E007C44E7 /* APIService.swift in Sources */,
 				0AAB74F726FD51BB007C44E7 /* TabBarViewController.swift in Sources */,
 				0AAB74F426FD47D0007C44E7 /* LogInViewController.swift in Sources */,
 				0AAB74DF26FD464E007C44E7 /* AppDelegate.swift in Sources */,
 				0AAB74FA26FD52BB007C44E7 /* MoviesTableViewController.swift in Sources */,
+				0AF90D2F26FDEDBE008649EF /* DetailViewController.swift in Sources */,
 				0AAB750426FD7FB5007C44E7 /* MovieTableViewCell.swift in Sources */,
 				0AAB74E126FD464E007C44E7 /* SceneDelegate.swift in Sources */,
 			);

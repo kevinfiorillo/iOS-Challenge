@@ -9,29 +9,7 @@
 import UIKit
 import Alamofire
 
-struct MoviesData: Codable {
-    let results: [Movie]
-    
-}
 
-struct Movie: Codable {
-    let title: String?
-    let poster_vertical: String?
-    let year: String?
-    let rate: Double?
-    let poster_horizontal: String?
-    let overview: String?
-
-    
-    private enum CodingKeys: String, CodingKey {
-        case title, overview
-        case year = "release_date"
-        case rate = "vote_average"
-        case poster_vertical = "poster_path"
-        case poster_horizontal = "backdrop_path"
-    }
-
-}
 
 class MoviesTableViewController: UIViewController {
 
@@ -45,7 +23,8 @@ class MoviesTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        moviesTableView.backgroundColor = .black
         self.moviesTableView.dataSource = self
         self.moviesTableView.delegate = self
         
@@ -93,6 +72,14 @@ extension  MoviesTableViewController: UITableViewDelegate, UITableViewDataSource
         cell.movieImage?.image = buildImage(to: movie)
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let indexCell = indexPath.row
+        let movieSelected = self.movies[indexCell]
+        let nextVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
+        nextVC.movie = movieSelected
+        self.present(nextVC, animated: true, completion: nil)
     }
     
     private func buildImage(to movie: Movie) -> UIImage{
