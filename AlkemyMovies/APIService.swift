@@ -13,6 +13,8 @@ final class APIService {
     
     static let shared = APIService()
     
+    let imageURL = "https://image.tmdb.org/t/p/w500/"
+    
     let popularURL = "https://api.themoviedb.org/3/movie/popular?api_key=e5aa5bb7813d738dff2e193ccdc2ea67"
     
     
