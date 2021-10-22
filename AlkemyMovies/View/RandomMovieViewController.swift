@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AleatoryMovieViewController.swift
 //  AlkemyMovies
 //
 //  Created by kevin on 23/09/2021.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RandomMovieViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
 
-}
 
+}
