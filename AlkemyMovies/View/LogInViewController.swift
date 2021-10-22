@@ -20,9 +20,11 @@ class LogInViewController: UIViewController {
     }
 
     @IBAction func joinInTapped(_ sender: UIButton) {
+        //falta verificacion de email. solo se comprueba que el usuario haya ingresado texto
           if userTextField.hasText{
                 presentTabBarController()
             }else{
+            //agregar pantalla de alerta
                 print("porfavor ingrese un nombre de usuario")
             }
         }

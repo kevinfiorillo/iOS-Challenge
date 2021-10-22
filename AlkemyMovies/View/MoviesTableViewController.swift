@@ -66,10 +66,7 @@ extension  MoviesTableViewController: UITableViewDelegate, UITableViewDataSource
         let movie = self.movies[indexPath.row]
         
       
-        cell.movieTitle?.text = movie.title
-
-        
-        cell.movieImage?.image = buildImage(to: movie)
+        cell.fillCell(with: movie)
 
         return cell
     }
@@ -82,17 +79,6 @@ extension  MoviesTableViewController: UITableViewDelegate, UITableViewDataSource
         self.present(nextVC, animated: true, completion: nil)
     }
     
-    private func buildImage(to movie: Movie) -> UIImage{
-        if let urlPost = movie.poster_vertical {
-            let urlString = "https://image.tmdb.org/t/p/w200\(urlPost)"
-            let fullURL = URL(string: urlString)!
-            if let data = try? Data(contentsOf: fullURL) {
-                return UIImage(data: data) ?? UIImage()
-            }
-           
-        }
-        return UIImage()
-    }
     
     
 }

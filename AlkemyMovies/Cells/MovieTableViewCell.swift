@@ -26,4 +26,22 @@ class MovieTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func fillCell(with movie: Movie){
+        
+        movieTitle?.text = movie.title
+        
+        if let urlPost = movie.poster_vertical {
+            let urlString = "https://image.tmdb.org/t/p/w200\(urlPost)"
+             guard let fullImageURL = URL(string: urlString) else {return}
+            if let data = try? Data(contentsOf: fullImageURL) {
+                movieImage?.image = UIImage(data: data) ?? UIImage()
+            }
+            
+            
+           
+        }
+        
+    }
+ 
+    
 }

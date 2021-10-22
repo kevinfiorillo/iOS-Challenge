@@ -15,6 +15,8 @@ final class APIService {
     
     let imageURL = "https://image.tmdb.org/t/p/w500/"
     
+    //crear clase con constanes APIKEY y URLs
+    
     let popularURL = "https://api.themoviedb.org/3/movie/popular?api_key=e5aa5bb7813d738dff2e193ccdc2ea67"
     
     

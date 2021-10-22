@@ -9,6 +9,8 @@
 import UIKit
 
 class RandomMovieViewController: UIViewController {
+    
+    //agregar boton para dirigir a detalle de pelicula aleatoria
 
     override func viewDidLoad() {
         super.viewDidLoad()
