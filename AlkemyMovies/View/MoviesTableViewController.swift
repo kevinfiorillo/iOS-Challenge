@@ -23,7 +23,6 @@ class MoviesTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         moviesTableView.backgroundColor = .black
         self.moviesTableView.dataSource = self
         self.moviesTableView.delegate = self

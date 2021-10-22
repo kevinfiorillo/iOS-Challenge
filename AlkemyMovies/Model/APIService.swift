@@ -13,12 +13,10 @@ final class APIService {
     
     static let shared = APIService()
     
-    let imageURL = "https://image.tmdb.org/t/p/w500/"
-    
-    //crear clase con constanes APIKEY y URLs
-    
-    let popularURL = "https://api.themoviedb.org/3/movie/popular?api_key=e5aa5bb7813d738dff2e193ccdc2ea67"
-    
+    let movieUrlPath = Constants.movieURLPath
+    let imageURL = Constants.imageURL
+    let apiKey = Constants.apiKey
+
     
 //    func getMovieDetails(movieId: Int, comp : @escaping (FeaturesMovie)->()) {
 //
@@ -40,6 +38,7 @@ final class APIService {
 
     func getPopularMovies(comp : @escaping ([Movie])->()) {
         
+        let popularURL = "\(movieUrlPath)popular?\(apiKey)"
         let request = AF.request(popularURL,method: HTTPMethod.get)
         
         request.responseJSON{ (data) in
@@ -51,4 +50,21 @@ final class APIService {
             }
         }
     }
+    
+//    func getRandomMovie(comp : @escaping ([Movie])->()) {
+//        //cambiar a random
+//        let popularURL = "\(movieUrlPath)popular?\(apiKey)"
+//        let request = AF.request(popularURL,method: HTTPMethod.get)
+//        
+//        request.responseJSON{ (data) in
+//            do {
+//                let movies = try JSONDecoder().decode(MoviesData.self, from: data.data!)
+//                comp(movies.results)
+//            } catch {
+//                print(error)
+//            }
+//        }
+//    }
+    
+    
 }

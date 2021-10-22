@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A94A339272320B1006615A7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94A338272320B1006615A7 /* Constants.swift */; };
 		0AAB74DF26FD464E007C44E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB74DE26FD464E007C44E7 /* AppDelegate.swift */; };
 		0AAB74E126FD464E007C44E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB74E026FD464E007C44E7 /* SceneDelegate.swift */; };
 		0AAB74E626FD464E007C44E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB74E426FD464E007C44E7 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A94A338272320B1006615A7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0AAB74DB26FD464E007C44E7 /* AlkemyMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlkemyMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AAB74DE26FD464E007C44E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AAB74E026FD464E007C44E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A94A33727231FCC006615A7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0A94A338272320B1006615A7 /* Constants.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		0AAB74D226FD464E007C44E7 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +97,7 @@
 		0AAB74DD26FD464E007C44E7 /* AlkemyMovies */ = {
 			isa = PBXGroup;
 			children = (
+				0A94A33727231FCC006615A7 /* Util */,
 				0AF90D3126FDF8D3008649EF /* Model */,
 				0AF90D3326FDF9A8008649EF /* Cells */,
 				0AF90D3226FDF8F7008649EF /* View */,
@@ -272,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AF90D2C26FDEB29008649EF /* Model.swift in Sources */,
+				0A94A339272320B1006615A7 /* Constants.swift in Sources */,
 				0AAB74FE26FD5460007C44E7 /* RandomMovieViewController.swift in Sources */,
 				0AAB750126FD772E007C44E7 /* APIService.swift in Sources */,
 				0AAB74F726FD51BB007C44E7 /* TabBarViewController.swift in Sources */,

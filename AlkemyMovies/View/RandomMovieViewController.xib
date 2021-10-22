@@ -17,20 +17,46 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Futura pantalla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xk-oF-es6">
-                    <rect key="frame" x="127" y="433" width="160" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Yo-Y0-A5g">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shuffle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JlB-hR-YMI">
+                    <rect key="frame" x="87" y="384.5" width="240" height="128"/>
+                    <color key="tintColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="Dz7-P7-h82"/>
+                        <constraint firstAttribute="height" constant="130.5" id="iVH-kt-0WV"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYP-cT-90b">
+                    <rect key="frame" x="142.5" y="790" width="129" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="88" id="JBF-FP-Gnj"/>
+                        <constraint firstAttribute="width" constant="129" id="aPY-bc-Zfp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                    <state key="normal" title="BUSCAR">
+                        <color key="titleColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="9Xk-oF-es6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TxU-gZ-mpo"/>
-                <constraint firstItem="9Xk-oF-es6" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="XuW-Er-TbJ"/>
+                <constraint firstItem="8Yo-Y0-A5g" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="0vb-3W-UWM"/>
+                <constraint firstItem="8Yo-Y0-A5g" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4ju-aU-OfF"/>
+                <constraint firstItem="8Yo-Y0-A5g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EAr-7l-8YG"/>
+                <constraint firstItem="JlB-hR-YMI" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="SQB-nL-u0I"/>
+                <constraint firstItem="JlB-hR-YMI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="b9e-5F-XO1"/>
+                <constraint firstAttribute="bottom" secondItem="8Yo-Y0-A5g" secondAttribute="bottom" id="bWA-QN-XBi"/>
+                <constraint firstItem="LYP-cT-90b" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="16" id="kgD-qI-HJH"/>
+                <constraint firstItem="LYP-cT-90b" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wiR-NM-djj"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="129"/>
+            <point key="canvasLocation" x="136.23188405797103" y="127.23214285714285"/>
         </view>
     </objects>
+    <resources>
+        <image name="shuffle" catalog="system" width="128" height="93"/>
+    </resources>
 </document>
