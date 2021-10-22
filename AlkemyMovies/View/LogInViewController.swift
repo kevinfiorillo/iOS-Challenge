@@ -20,20 +20,44 @@ class LogInViewController: UIViewController {
     }
 
     @IBAction func joinInTapped(_ sender: UIButton) {
-        //falta verificacion de email. solo se comprueba que el usuario haya ingresado texto
-          if userTextField.hasText{
-                presentTabBarController()
-            }else{
-            //agregar pantalla de alerta
-                print("porfavor ingrese un nombre de usuario")
-            }
+        
+        if let userEmail = userTextField.text, !userEmail.isEmpty{
+            validateUserEmail(userEmail) ? presentTabBarController() : showAlert(because: ValidationError.email)
+        }else{
+            showAlert(because: ValidationError.empty)
         }
-        
-        
-        private func presentTabBarController() {
-            let tabBarController = TabBarViewController()
-            tabBarController.modalPresentationStyle = .overFullScreen
-            self.present(tabBarController, animated: true)
     }
+
+    private func validateUserEmail(_ email: String) -> Bool{
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
+    }
+    private func showAlert(because: ValidationError){
+        var messageError = ""
+        
+        switch because {
+            case .email:
+                messageError = "email incorrecto"
+            case .empty:
+                messageError = "campo vacio"
+            default:
+                messageError = "error al ingresar usuario"
+        }
+        let alert = UIAlertController(title: messageError, message: "Por favor intentelo nuevamente", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Reintentar", style: .default, handler: nil))
+        self.present(alert,animated: true)
+    }
+        
+    private func presentTabBarController() {
+        let tabBarController = TabBarViewController()
+        tabBarController.modalPresentationStyle = .overFullScreen
+        self.present(tabBarController, animated: true)
+    }
+    
+    private enum ValidationError {
+        case email, empty
+    }
+    
 
 }
