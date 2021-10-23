@@ -41,8 +41,8 @@ class LogInViewController: UIViewController {
                 messageError = "email incorrecto"
             case .empty:
                 messageError = "campo vacio"
-            default:
-                messageError = "error al ingresar usuario"
+//            default:
+//                messageError = "error al ingresar usuario"
         }
         let alert = UIAlertController(title: messageError, message: "Por favor intentelo nuevamente", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Reintentar", style: .default, handler: nil))

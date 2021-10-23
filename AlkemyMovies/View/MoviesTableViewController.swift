@@ -15,6 +15,8 @@ class MoviesTableViewController: UIViewController {
 
     @IBOutlet weak var moviesTableView: UITableView!
     
+    @IBOutlet weak var activity: UIActivityIndicatorView!
+    
     let api = APIService.shared
     
     var movies: [Movie] = [Movie]()
@@ -27,26 +29,32 @@ class MoviesTableViewController: UIViewController {
         self.moviesTableView.dataSource = self
         self.moviesTableView.delegate = self
         
+        prepareActivity()
         fetchMovies()
         
-        //self.moviesTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.moviesTableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "MovieTableViewCell")
-
-        getCategories()
         
     }
     
-    private func getCategories(){
-           self.moviesTableView.reloadData()
-       }
+    private func prepareActivity(){
+        activity.color = .orange
+    
+        activity.isHidden = false
+        activity.startAnimating()
+    }
+    
+    private func disapearActivity(){
+        activity.stopAnimating()
+        activity.isHidden = true
+    }
 
     private func fetchMovies() {
+        
         api.getPopularMovies{
             data in
             self.movies = data
-            DispatchQueue.main.async {
-                self.moviesTableView.reloadData()
-            }
+            
+            self.disapearActivity()
             self.moviesTableView.reloadData()
         }
     }
@@ -75,7 +83,8 @@ extension  MoviesTableViewController: UITableViewDelegate, UITableViewDataSource
         let movieSelected = self.movies[indexCell]
         let nextVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
         nextVC.movie = movieSelected
-        self.present(nextVC, animated: true, completion: nil)
+        //self.present(nextVC, animated: true, completion: nil)
+        navigationController?.pushViewController(nextVC, animated: true)
     }
     
     

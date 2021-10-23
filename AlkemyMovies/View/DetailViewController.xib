@@ -22,8 +22,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cAN-7m-9zt" userLabel="movie_image">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cAN-7m-9zt" userLabel="movie_image">
                     <rect key="frame" x="0.0" y="44" width="414" height="228"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="228" id="iUF-da-CML"/>
+                    </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEO-LN-Nbn">
                     <rect key="frame" x="20" y="282" width="374" height="36"/>
@@ -65,7 +68,6 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SC8-xe-4VM" secondAttribute="trailing" constant="20" id="bhX-cf-c32"/>
                 <constraint firstItem="YEO-LN-Nbn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="e03-hy-zHA"/>
                 <constraint firstItem="dhl-kp-eMD" firstAttribute="top" secondItem="SC8-xe-4VM" secondAttribute="bottom" constant="8" id="eMA-81-s0D"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cAN-7m-9zt" secondAttribute="bottom" constant="590" id="kEX-Lf-6VF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YEO-LN-Nbn" secondAttribute="trailing" constant="20" id="rGa-mR-u11"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YXo-mP-yJv" secondAttribute="trailing" constant="20" id="s9k-pg-WCy"/>
             </constraints>
