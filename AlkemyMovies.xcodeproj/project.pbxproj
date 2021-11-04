@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A7AFB4C27346DC600875C3D /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7AFB4B27346DC600875C3D /* ListViewModel.swift */; };
+		0A7AFB4F2734737600875C3D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7AFB4E2734737600875C3D /* DetailViewModel.swift */; };
 		0A94A339272320B1006615A7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94A338272320B1006615A7 /* Constants.swift */; };
 		0AAB74DF26FD464E007C44E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB74DE26FD464E007C44E7 /* AppDelegate.swift */; };
 		0AAB74E126FD464E007C44E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB74E026FD464E007C44E7 /* SceneDelegate.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A7AFB4B27346DC600875C3D /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		0A7AFB4E2734737600875C3D /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		0A94A338272320B1006615A7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0AAB74DB26FD464E007C44E7 /* AlkemyMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlkemyMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AAB74DE26FD464E007C44E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +72,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A7AFB4A27346D8A00875C3D /* List */ = {
+			isa = PBXGroup;
+			children = (
+				0AF90D3326FDF9A8008649EF /* Cells */,
+				0A7AFB4B27346DC600875C3D /* ListViewModel.swift */,
+				0AAB74F826FD52BB007C44E7 /* MoviesTableViewController.swift */,
+				0AAB74F926FD52BB007C44E7 /* MoviesTableViewController.xib */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		0A7AFB4D2734736400875C3D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0A7AFB4E2734737600875C3D /* DetailViewModel.swift */,
+				0AF90D2D26FDEDBE008649EF /* DetailViewController.swift */,
+				0AF90D2E26FDEDBE008649EF /* DetailViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		0A94A33727231FCC006615A7 /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,10 +122,11 @@
 		0AAB74DD26FD464E007C44E7 /* AlkemyMovies */ = {
 			isa = PBXGroup;
 			children = (
-				0A94A33727231FCC006615A7 /* Util */,
 				0AF90D3126FDF8D3008649EF /* Model */,
-				0AF90D3326FDF9A8008649EF /* Cells */,
-				0AF90D3226FDF8F7008649EF /* View */,
+				0AF90D3226FDF8F7008649EF /* Login */,
+				0A7AFB4A27346D8A00875C3D /* List */,
+				0A7AFB4D2734736400875C3D /* Detail */,
+				0A94A33727231FCC006615A7 /* Util */,
 				0AAB74DE26FD464E007C44E7 /* AppDelegate.swift */,
 				0AAB74E026FD464E007C44E7 /* SceneDelegate.swift */,
 				0AAB74E426FD464E007C44E7 /* Main.storyboard */,
@@ -120,20 +146,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		0AF90D3226FDF8F7008649EF /* View */ = {
+		0AF90D3226FDF8F7008649EF /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				0AAB74F226FD47D0007C44E7 /* LogInViewController.swift */,
 				0AAB74F326FD47D0007C44E7 /* LogInViewController.xib */,
 				0AAB74F626FD51BB007C44E7 /* TabBarViewController.swift */,
-				0AAB74F826FD52BB007C44E7 /* MoviesTableViewController.swift */,
-				0AAB74F926FD52BB007C44E7 /* MoviesTableViewController.xib */,
-				0AF90D2D26FDEDBE008649EF /* DetailViewController.swift */,
-				0AF90D2E26FDEDBE008649EF /* DetailViewController.xib */,
 				0AAB74FC26FD5460007C44E7 /* RandomMovieViewController.swift */,
 				0AAB74FD26FD5460007C44E7 /* RandomMovieViewController.xib */,
 			);
-			path = View;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		0AF90D3326FDF9A8008649EF /* Cells */ = {
@@ -284,12 +306,14 @@
 			files = (
 				0AF90D2C26FDEB29008649EF /* Model.swift in Sources */,
 				0A94A339272320B1006615A7 /* Constants.swift in Sources */,
+				0A7AFB4C27346DC600875C3D /* ListViewModel.swift in Sources */,
 				0AAB74FE26FD5460007C44E7 /* RandomMovieViewController.swift in Sources */,
 				0AAB750126FD772E007C44E7 /* APIService.swift in Sources */,
 				0AAB74F726FD51BB007C44E7 /* TabBarViewController.swift in Sources */,
 				0AAB74F426FD47D0007C44E7 /* LogInViewController.swift in Sources */,
 				0AAB74DF26FD464E007C44E7 /* AppDelegate.swift in Sources */,
 				0AAB74FA26FD52BB007C44E7 /* MoviesTableViewController.swift in Sources */,
+				0A7AFB4F2734737600875C3D /* DetailViewModel.swift in Sources */,
 				0AF90D2F26FDEDBE008649EF /* DetailViewController.swift in Sources */,
 				0AAB750426FD7FB5007C44E7 /* MovieTableViewCell.swift in Sources */,
 				0AAB74E126FD464E007C44E7 /* SceneDelegate.swift in Sources */,

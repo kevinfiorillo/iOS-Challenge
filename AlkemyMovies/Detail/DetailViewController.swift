@@ -20,24 +20,26 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var detailOverview: UILabel!
     
-    var movie: Movie?
     
+    var viewModel: DetailViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let vm = viewModel {
+            detailTitle.text = vm.movie.title
+            detailYear.text = vm.movie.year
+            detailRate.text = getRate(to: vm.movie)
+            detailOverview.text = vm.movie.overview
+            detailPoster.image = buildImage(to: vm.movie)
+        }
         
-        detailTitle.text = movie?.title
-        detailYear.text = movie?.year
-        detailRate.text = getRate()
-        detailOverview.text = movie?.overview
-        detailPoster.image = buildImage()
 
       
     }
 
-    private func buildImage() -> UIImage{
-        if let urlPost = movie!.poster_horizontal {
+    private func buildImage(to movie: Movie) -> UIImage{
+        if let urlPost = movie.poster_horizontal {
             let urlString = "https://image.tmdb.org/t/p/w300\(urlPost)"
             let fullURL = URL(string: urlString)!
             if let data = try? Data(contentsOf: fullURL) {
@@ -48,13 +50,13 @@ class DetailViewController: UIViewController {
         return UIImage()
     }
     
-    private func getRate() -> String{
+    private func getRate(to movie: Movie) -> String{
         var finalRate = ""
-        let rateInt = Int(round(movie!.rate!))
+        let rateInt = Int(round(movie.rate!))
         for _ in 1...rateInt {
             finalRate += "⭐️"
         }
-        return "\(movie!.rate!) \(finalRate)"
+        return "\(movie.rate!) \(finalRate)"
     }
     
 

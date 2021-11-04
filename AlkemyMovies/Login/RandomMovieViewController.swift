@@ -8,6 +8,8 @@
 
 import UIKit
 
+//Falta implementacion
+
 class RandomMovieViewController: UIViewController {
     
     //agregar boton para dirigir a detalle de pelicula aleatoria
