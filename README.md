@@ -1,6 +1,6 @@
-# iOS-Challenge
+# preaceleracion iOS-Challenge
 MovieApp
-- arquitectura MVC
+- arquitectura MVVM
 - consumo de API movieDB
 - Cocoapods como manejador de dependencias
   - Alamofire
