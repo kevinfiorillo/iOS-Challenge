@@ -34,6 +34,25 @@ final class APIService {
         }
     }
     
+    
+//    //POST
+//    func postRateMovie(for id: Int){
+//        let newRate: [String:Double] = ["value" : 7.5]
+//        let url = "https://api.themoviedb.org/3/movie/\(id)/rating?api_key=\(apiKey)"
+//        let request = AF.request(url,method: .post, parameters: newRate, encoding: JSONEncoding.default)
+//        request.response{ response in
+//            switch response.result {
+//            case .success(_):
+//                self.showMessage(message: "Valoracion hecha!")
+//            case .failure(let error):
+//                self.showError(message: error.localizedDescription)
+//            }
+//        }
+//    }
+    
+    
+    
+    
 //    func getRandomMovie(comp : @escaping (Movie)->()) {
 //
 //    }
